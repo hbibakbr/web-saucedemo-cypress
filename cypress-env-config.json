@@ -1,0 +1,23 @@
+{
+    "development": {
+        "baseUrl": "https://www.saucedemo.com/",
+        "env": {
+            "environmentName": "development",
+            "someOtherKey": "someValueOnDev"
+        }
+    },
+    "staging": {
+        "baseUrl": "https://www.saucedemo.com/",
+        "env": {
+            "environmentName": "staging",
+            "someOtherKey": "someValueOnStaging"
+        }
+    },
+    "production": {
+        "baseUrl": "https://www.saucedemo.com/",
+        "env": {
+            "environmentName": "production",
+            "someOtherKey": "someValueOnProduction"
+        }
+    }
+}
