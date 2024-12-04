@@ -5,22 +5,25 @@ class LoginPage {
     msgError = 'h3[data-test=error]';
     loginPageUrl = 'https://www.saucedemo.com/'
 
-    inputUsername () {
-        cy.get(this.username);
+    inputUsername (username) {
+        cy.get(this.username).type(username);
     }
 
-    inputPassword () {
-        cy.get(this.password);
+    inputPassword (password) {
+        cy.get(this.password).type(password);
     }
 
     clickLoginButton () {
         cy.get(this.btnLogin).click();
     }
 
-    errorMessageIsDisplayed () {
-        cy.get(this.msgError);
+    errorMessageIsDisplayed (errorMsg) {
+        cy.get(this.msgError).should('have.text', errorMsg);
     }
 
+    verifyLoginUrl () {
+        cy.url().should('equal', this.loginPageUrl);
+    }
 
 }
 

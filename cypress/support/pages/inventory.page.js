@@ -9,7 +9,7 @@ class InventoryPage {
     cartBadge = 'span[data-test=shopping-cart-badge]';
     sortDropDown = 'select[data-test="product-sort-container"]';
 
-    clickBurgerButton () {
+    clickBurgerMenu () {
         cy.get(this.burgerMenu).click();
     }
 
@@ -27,6 +27,10 @@ class InventoryPage {
 
     clickCartItem () {
         cy.get(this.cart).click();
+    }
+
+    verifyBurgerMenuIsDisplayed () {
+        cy.get(this.burgerMenu).should('be.visible');
     }
 
     verifyInventoryUrl () {
@@ -49,5 +53,6 @@ class InventoryPage {
         cy.get(this.cartBadge);
     }
 
-
 }
+
+export default new InventoryPage();
