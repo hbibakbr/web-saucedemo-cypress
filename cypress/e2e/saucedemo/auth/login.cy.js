@@ -7,6 +7,29 @@ describe('Login Test Cases', () => {
   beforeEach(() => {
     cy.visit('/');
   });
+
+  it('Verify Failed to Login with All Field Empty', () => {
+    loginPage.clickLoginButton();
+    loginPage.errorMessageIsDisplayed(login.message.msg_empty_username);
+  });
+
+  it('Verify Success to Login with Valid Credentials', () => {
+    loginPage.inputUsername(login.username);
+    loginPage.inputPassword(login.password);
+    loginPage.clickLoginButton();
+    inventoryPage.verifyInventoryUrl();
+    inventoryPage.verifyInventoryTitle();
+    inventoryPage.verifyBurgerMenuIsDisplayed();
+  });
+
+  it('Verify Success to Logout', () => {
+    loginPage.inputUsername(login.username);
+    loginPage.inputPassword(login.password);
+    loginPage.clickLoginButton();
+    menuPage.clickOpenMenu();
+    menuPage.clickLogoutMenu();
+    loginPage.verifyLoginUrl();
+  });
   
   it('Verify Failed to Login with Not Registered Account', () => {
     loginPage.inputUsername(login.unregist);
@@ -39,29 +62,6 @@ describe('Login Test Cases', () => {
     loginPage.inputUsername(login.username);
     loginPage.clickLoginButton();
     loginPage.errorMessageIsDisplayed(login.message.msg_empty_password);
-  });
-
-  it.only('Verify Failed to Login with All Field Empty', () => {
-    loginPage.clickLoginButton();
-    loginPage.errorMessageIsDisplayed(login.message.msg_empty_username);
-  });
-
-  it.only('Verify Success to Login with Valid Credentials', () => {
-    loginPage.inputUsername(login.username);
-    loginPage.inputPassword(login.password);
-    loginPage.clickLoginButton();
-    inventoryPage.verifyInventoryUrl();
-    inventoryPage.verifyInventoryTitle();
-    inventoryPage.verifyBurgerMenuIsDisplayed();
-  });
-
-  it.only('Verify Success to Logout', () => {
-    loginPage.inputUsername(login.username);
-    loginPage.inputPassword(login.password);
-    loginPage.clickLoginButton();
-    menuPage.clickOpenMenu();
-    menuPage.clickLogoutMenu();
-    loginPage.verifyLoginUrl();
   });
 
 })

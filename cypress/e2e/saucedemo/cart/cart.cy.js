@@ -35,5 +35,9 @@ describe('Cart Features Test Cases', () => {
     inventoryPage.clickRemove();
     inventoryPage.verfiyAddToCart();
   });
+
+  afterEach(() => {
+    cy.clearCookies();
+  })
   
 });
