@@ -25,7 +25,7 @@ class InventoryPage {
         cy.get(this.productItem).click();
     }
 
-    clickCartItem () {
+    clickCartIcon () {
         cy.get(this.cart).click();
     }
 
@@ -49,8 +49,8 @@ class InventoryPage {
         cy.get(this.btnRemove).should('exist');
     }
 
-    verifyCartBadge () {
-        cy.get(this.cartBadge);
+    verifyCartBadge (total) {
+        cy.get(this.cartBadge).should('have.text', total);
     }
 
 }
