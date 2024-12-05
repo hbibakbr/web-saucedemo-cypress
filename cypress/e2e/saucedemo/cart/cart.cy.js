@@ -3,7 +3,7 @@ import inventoryPage from "../../../support/pages/inventory.page.js";
 import cartPage from "../../../support/pages/cart.page.js";
 const login = require('../../../fixtures/login.json');
 
-describe('Cart Features Test Cases', () => {
+describe('Cart Suite', () => {
 
   beforeEach(() => {
     cy.visit('/');

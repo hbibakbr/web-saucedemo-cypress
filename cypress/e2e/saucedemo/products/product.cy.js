@@ -2,7 +2,7 @@ import loginPage from "../../../support/pages/login.page.js";
 import inventoryPage from "../../../support/pages/inventory.page.js";
 const login = require('../../../fixtures/login.json');
 
-describe('Product Features Test Cases', () => {
+describe('Products Suite', () => {
 
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/');
