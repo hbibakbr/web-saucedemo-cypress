@@ -7,8 +7,8 @@
 This repository is the result of a project practice aimed at learning and applying Web Automation testing using Cypress. The main focus of this project is to validate the core functionalities of Saucedemo. The web automation Saucedemo covering the functional test of auth, cart, and products. This source of project is [Saucedemo](https://www.saucedemo.com/) web demo application. Here's a running demo video of the Saucedemo Funtional testing [Demo running Cypress - Saucedemo](https://youtu.be/9vBLXumI-gU).
 
 ## Test Cases and Locator
-This link to access [Test Cases](https://docs.google.com/spreadsheets/d/1ApdKCiUPD21bazp0a2tqLUaMsYfxSCXr3-p0CZsMRyA/edit?usp=sharing).
-This link to access [Locator - Saucedemo](https://docs.google.com/spreadsheets/d/17RNuoDUOsxU3uT37RerlvGpum5UU9iX-NeSCH_XQBic/edit?usp=sharing).
+This link to access [Test Cases](https://docs.google.com/spreadsheets/d/1ApdKCiUPD21bazp0a2tqLUaMsYfxSCXr3-p0CZsMRyA/edit?gid=2144626917#gid=2144626917).
+This link to access [Locator - Saucedemo](https://docs.google.com/spreadsheets/d/17RNuoDUOsxU3uT37RerlvGpum5UU9iX-NeSCH_XQBic/edit?gid=668265469#gid=668265469).
 
 ## Screenshot of Saucedemo Report
 ### Mochawesome Report
